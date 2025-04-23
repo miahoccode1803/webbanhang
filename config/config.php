@@ -1,11 +1,16 @@
 <?php 
-DEFINE('INDEX_URL','http://dongho.local/WBH_MVC/');
+// Tự động xác định URL gốc của website
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') ? "https://" : "http://";
+$domain = $_SERVER['HTTP_HOST'];
+$path = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
 
-DEFINE('DB_HOST','localhost');
-DEFINE('DB_USERNAME','root');
-DEFINE('DB_PASSWORD','');
-DEFINE('DB_NAME','qlbh');
+define('INDEX_URL', $protocol . $domain . $path . '/');
 
-DEFINE('CONTROLLER_DEFAULT','index');
-DEFINE('ACTION_DEFAULT','index');
+define('DB_HOST','localhost');
+define('DB_USERNAME','root');
+define('DB_PASSWORD','');
+define('DB_NAME','qlbh');
+
+define('CONTROLLER_DEFAULT','index');
+define('ACTION_DEFAULT','index');
 ?>
