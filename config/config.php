@@ -1,5 +1,5 @@
 <?php 
-DEFINE('INDEX_URL','http://localhost/WBH_MVC/');
+DEFINE('INDEX_URL','http://dongho.local/WBH_MVC/');
 
 DEFINE('DB_HOST','localhost');
 DEFINE('DB_USERNAME','root');
